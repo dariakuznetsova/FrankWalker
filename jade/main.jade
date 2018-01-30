@@ -1,0 +1,35 @@
+include mixins
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport",content="width=device-width,initial-scale=1.0" class='viewport')
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Oswald:300,400" rel="stylesheet")
+		link(rel="stylesheet" type="text/css" href="css/main.css")
+		block title
+	body
+		include ../site/images/sprites/sprites.svg
+
+		.main-wrapper.j-main-wrapper
+			include blocks/_header-menu.jade
+
+			.aside-dots.j-dots
+				ul
+					li.j-dot.active
+					li.j-dot
+					li.j-dot
+					li.j-dot
+			
+			block content
+				| No content defined
+
+			include blocks/_footer.jade
+		.popup-wrapper.j-popup-wrapper
+					
+		script(src="js/libs/jquery.min.js")
+		script(src="js/libs/device.js")
+		script(src="js/libs/jquery.bpopup.min.js")
+		script(src="js/libs/jquery.fullPage.min.js")
+		script(src="js/main.js")
+		script(async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCJKgZkqipRSU8QhkE9vuTm857NAv6idgw&callback=initMap')
+		

@@ -1,0 +1,26 @@
+header.header
+	ul.header-list
+		li.hamburger-menu.j-hamburger-menu
+			a(href='javascript:;').hamburger.hamburger--spin.j-hamburger-link
+				span.hamburger-box
+					span.hamburger-inner
+		li.header-list__item.logo-li
+			.logo-img
+				img(src='images/logo.png' alt='logo')
+		li.header-list__item.menu-li.j-header-menu
+			ul.menu-list.j-menu-list#menu
+				li(data-menuanchor="home").menu-list__item
+					a(href="#home" data-anchor='#homeSection').j-anchor-link Home
+				li(data-menuanchor="about").menu-list__item
+					a(href="#about" data-anchor='#aboutSection').j-anchor-link About
+				li(data-menuanchor="services").menu-list__item
+					a(href="#services" data-anchor='#servicesSection').j-anchor-link Services
+				li.menu-list__item.testimonials-item
+					a(href="http://www.frankwalkerlaw.com/Testimonials.aspx") Testimonials
+				li(data-menuanchor="contact").menu-list__item
+					a(href="#contact" data-anchor='#contactSection').j-anchor-link Contact us
+		li.header-list__item.address-li
+			a(href='tel:+4123157441').call-us-link
+				+icon("call",28,28)
+			p (412) 315-7441
+			p 428 Forbes Avenue, Ste. 1800 Pittsburgh, PA 15219

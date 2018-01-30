@@ -1,0 +1,93 @@
+extends ../main.jade
+
+block title
+	title FRANK WALKER
+
+block content
+	.sliders-wrapper.j-sliders-wrapper
+		section(data-anchor="home").section.section-home#homeSection
+			.content-block
+				.left-block
+					.home__title.j-home-title
+						p Injured?
+						p We can help
+					.home__subtitle.j-home-title
+						p NATIONWIDE TOP 100 TRIAL LAWYER
+						p Real Talk. Real Experience. Real Results.
+					.video-block
+						video(autoplay='autoplay' loop width='100%' height='auto' poster="images/video-img.jpg").video-short.j-video-short
+							source(src='video/fw.mp4' type="video/mp4")
+						a(href='javascript:;').video-popup-link.j-video-popup-link
+							.play-video__mobile
+								+icon("play",40,40)
+								span Play video
+						.video-modal.j-video-modal
+							a(href='javascript:;').j-hide-video-link hide this video
+							video(controls width='100%' height='auto' poster="images/video-img.jpg").j-video
+								source(src='http://www.frankwalkerlaw.com/media/Firm-Overview.mp4' type="video/mp4")
+
+				.logos-block
+					ul.logos-table-wrapper
+						- var logos = ['01','01','02','03','04','05','06','07','08','09','10','11','12','13','14']
+						each item in logos
+							li.logos-table__item
+								img(src='images/logos/#{item}.png' alt='brand')
+
+				.right-block
+					form.contact-form
+						input(type-'text' placeholder='Name')
+						input(type-'text' placeholder='Your E-mail')
+						input(type-'text' placeholder='Subject')
+						textarea(placeholder='Your Message')
+						button.form-button Send my info
+
+		section(data-anchor="about").section.section-about#aboutSection
+			.content-block
+				.left-block
+					.detailed-info
+						.detailed-info__title Real talk
+						p If you have been in a car accident or convicted of a serious criminal offense you need a lawyer who will treat and your case with the respect they deserve. Frank Walker doesn’t tell you what you want to hear; he tells you what you need to know.
+						.detailed-info__title Real results
+						p For over 10 years, Frank Walker has stood strong behind his clients, from local Pittsburgh courts all the way to the Supreme Court of Pennsylvania.
+						.detailed-info__title Real expirience
+						p Aside from being a preeminent Pittsburgh car accident lawyer, Frank Walker has successfully defended clients in numerous trials, petitioned judges, and performed hundreds of client consultations.
+				.right-block
+					.video-wrapper
+						video(controls width='100%' height='auto' poster="images/video-poster.jpg")
+							source(src='http://www.frankwalkerlaw.com/media/Firm-Overview.mp4' type="video/mp4")
+					.about__text-block
+						p Read what clients have said in our testimonials section, or watch Frank explain what he does in his own words at our Media Center.
+
+		section(data-anchor="services").section.section-services.j-section-services#servicesSection
+			.content-block
+				ul.blocks-list
+					li.block__item.block__item_first.j-block-item
+						.detailed-info.j-detailed-block
+							.detailed-info__title.j-title.detailed-info__title_modify Car Accident Lawyer
+							p If you need a lawyer after being injured in an auto accident, there’s no other Pittsburgh lawyer who will fight harder for your rights.
+							a(href='javascript:;').form-button.j-form-button.button-visible Tell us your case
+							include ../blocks/_popup.jade
+					li.block__item.j-block-item
+						.detailed-info.j-detailed-block
+							.detailed-info__title.j-title Criminal Defense Lawyer
+							p Whether facing misdemeanor DUI charges, drug charges, or felony charges, Frank Walker will ensure your case gets the attention and diligence it deserves.
+							a(href='javascript:;').form-button.j-form-button Tell us your case
+							include ../blocks/_popup.jade
+					li.block__item.j-block-item
+						.detailed-info.j-detailed-block
+							.detailed-info__title.j-title Personal Injury Lawyer
+							p Suffering from personal injury, negligence, medical malpractice, workplace injuries, or the loss of a loved one? Go with the lawyer people count on at the times when it matters most.
+							a(href='javascript:;').form-button.j-form-button Tell us your case
+							include ../blocks/_popup.jade
+
+		section(data-anchor="contact").section.section-contact#contactSection
+			.map#map
+			.address-block.j-address
+				p.tel (412) 212-3878
+				p.address 428 Forbes Avenue, Ste. 1800 Pittsburgh, PA 15219
+			form.contact-form.j-contact-form
+				input(type-'text' placeholder='Name')
+				input(type-'text' placeholder='Your E-mail')
+				input(type-'text' placeholder='Subject')
+				textarea(placeholder='Your Message')
+				button.form-button Send my info
